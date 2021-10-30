@@ -5984,6 +5984,7 @@ Lang.template = {
     "start_drawing": "그리기 시작하기 %1",
     "stop_drawing": "그리기 멈추기 %1",
     "set_color": "붓의 색을 %1 (으)로 정하기 %2",
+    "pick_color": "%1",
     "set_random_color": "붓의 색을 무작위로 정하기 %1",
     "change_thickness": "붓의 굵기를 %1 만큼 바꾸기 %2",
     "set_thickness": "붓의 굵기를 %1 (으)로 정하기 %2",

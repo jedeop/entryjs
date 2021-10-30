@@ -58,7 +58,7 @@ Entry.CodeMap = {};
                 '맨 뒤': 'BACK',
             },
         ],
-        set_color: [
+        pick_color: [
             {
                 red: '#FF0000',
                 orange: '#FF9966',

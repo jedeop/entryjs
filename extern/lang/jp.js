@@ -5985,6 +5985,7 @@ Lang.template = {
     "start_drawing": "描きはじめる %1",
     "stop_drawing": "描きおえる %1",
     "set_color": "筆の色を%1にする %2",
+    "pick_color": "%1",
     "set_random_color": "筆の色をランダムにする %1",
     "change_thickness": "筆の太さを %1 だけ変える %2",
     "set_thickness": "筆の太さを%1にする %2",

@@ -5191,6 +5191,7 @@ Lang.template = {
     "start_drawing": "Start drawing %1",
     "stop_drawing": "Stop drawing %1",
     "set_color": "Set brush color to %1 %2",
+    "pick_color": "%1",
     "set_random_color": "Set brush color to random %1",
     "change_thickness": "Change thickness by %1 %2",
     "set_thickness": "Set thickness to %1 %2",

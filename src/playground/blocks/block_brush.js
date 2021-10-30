@@ -87,6 +87,44 @@ module.exports = {
                 },
                 syntax: { js: [], py: ['Entry.stop_drawing()'] },
             },
+            pick_color: {
+                color: EntryStatic.colorSet.block.default.BRUSH,
+                outerLine: EntryStatic.colorSet.block.darken.BRUSH,
+                skeleton: 'basic_string_field',
+                statements: [],
+                params: [
+                    {
+                        type: 'Color',
+                    },
+                ],
+                events: {},
+                def: {
+                    params: [null],
+                    type: 'pick_color',
+                },
+                paramsKeyMap: {
+                    VALUE: 0,
+                },
+                func(sprite, script) {
+                    return script.getField('VALUE', script);
+                },
+                syntax: {
+                    js: [],
+                    py: [
+                        {
+                            syntax: '%1',
+                            keyOption: 'pick_color',
+                            textParams: [
+                                {
+                                    type: 'Color',
+                                    converter: Entry.block.converters.returnStringValueUpperCase,
+                                    codeMap: 'Entry.CodeMap.Entry.pick_color[0]',
+                                },
+                            ],
+                        },
+                    ],
+                },
+            },
             set_color: {
                 color: EntryStatic.colorSet.block.default.BRUSH,
                 outerLine: EntryStatic.colorSet.block.darken.BRUSH,
@@ -94,7 +132,8 @@ module.exports = {
                 statements: [],
                 params: [
                     {
-                        type: 'Color',
+                        type: 'Block',
+                        accept: 'string',
                     },
                     {
                         type: 'Indicator',
@@ -104,7 +143,12 @@ module.exports = {
                 ],
                 events: {},
                 def: {
-                    params: [null],
+                    params: [
+                        {
+                            type: 'pick_color',
+                        },
+                        null,
+                    ],
                     type: 'set_color',
                 },
                 pyHelpDef: {
@@ -117,7 +161,7 @@ module.exports = {
                 class: 'brush_color',
                 isNotFor: ['textBox'],
                 func(sprite, script) {
-                    const colour = script.getField('VALUE', script);
+                    const colour = script.getStringValue('VALUE');
 
                     if (!sprite.brush || !sprite.shapes.length) {
                         Entry.setBasicBrush(sprite);
@@ -142,13 +186,6 @@ module.exports = {
                     py: [
                         {
                             syntax: 'Entry.set_brush_color_to(%1)',
-                            textParams: [
-                                {
-                                    type: 'Color',
-                                    converter: Entry.block.converters.returnStringValueUpperCase,
-                                    codeMap: 'Entry.CodeMap.Entry.set_color[0]',
-                                },
-                            ],
                         },
                     ],
                 },

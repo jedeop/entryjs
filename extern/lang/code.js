@@ -5984,6 +5984,7 @@ Lang.template = {
     "start_drawing": "this.startDraw() %1",
     "stop_drawing": "this.stopDraw() %1",
     "set_color": "this.brush.color = %1 %2",
+    "pick_color": "%1",
     "set_random_color": "this.brush.color = Entry.getRandomColor() %1",
     "change_thickness": "this.brush.thickness += %1 %2",
     "set_thickness": "this.brush.thickness = %1 %2",

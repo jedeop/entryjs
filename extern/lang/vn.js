@@ -5985,6 +5985,7 @@ Lang.template = {
     "start_drawing": "bắt đầu vẽ %1",
     "stop_drawing": "ngừng vẽ %1",
     "set_color": "thiết lập màu cọ bằng %1 %2",
+    "pick_color": "%1",
     "set_random_color": "thiết lập màu cọ ngẫu nhiên %1",
     "change_thickness": "Thay đổi độ dày bằng %1 %2",
     "set_thickness": "thiết lập độ dày %1 %2",
